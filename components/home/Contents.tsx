@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import FAQList from './FAQItem';
 
 const data = [
   {
@@ -141,11 +142,43 @@ const Contents = () => {
           </span>
         </div>
 
+        {/* Frequently Asked Questions*/}
+        <div className="bg-[#ffffff]">
+          <div className="container max-w-screen-xl text-center mx-auto pt-[152px] pb-[70px]">
 
-        {/* FAQ */}
-        <div className="container max-w-screen-xl xl:mx-auto pt-[50px] sm:pt-[50px] pb-[50px] sm:pb-[50px] sm:px-4">
-            <h2 className="text-center text-[48px] capitalize leading-[72px] font-[600] pb-[30px]">Frequently Asked Questions</h2>
+            <div className="max-w-[968px] mx-auto">
+              <h2 className="text-[48px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Frequently Asked Questions</h2>
+            </div>
+
+            <div className="mt-[40px]">
+              <FAQList />
+            </div>
+
+          </div>
         </div>
+
+
+        {/* XXX Chatbot is Listening - Talk to Your PDF AI Assistant */}
+        <div className="bg-[#050f1f]">
+          <div className="container max-w-screen-xl text-center mx-auto py-[152px]">
+
+            <div className="max-w-[968px] mx-auto">
+              <h2 className="text-[48px] capitalize leading-[65px] text-[#ffffff] font-[600] pb-[20px]">XXX Chatbot is Listening - Talk to Your PDF AI Assistant</h2>
+              <p className="text-[18px] capitalize text-[#C8CBCC]">Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need, and watch the answers roll in.</p>
+            </div>
+
+            <div className="flex justify-center mt-[40px]">
+              <Link href={'/dashboard'}>
+                <button className="flex items-center bg-[#1d56e5] text-center rounded-full text-[#fff] hover:text-[#ffffff9c] text-[20px] font-[700] px-[30px] py-[10px] ">
+                  Get Started for Free
+                </button>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
+
         {/*<div>*/}
         {/*    <h2>FAQs</h2>*/}
         {/*    <h4>What AI model does XXX use, and is it better than ChatPDF?</h4>*/}
