@@ -74,7 +74,7 @@ const Contents = () => {
   return (
     <>
         {/* iframe */}
-        <div className="container max-w-screen-xl xl:mx-auto mt-[-300px] sm:px-4">
+        <div className="container max-w-screen-xl xl:mx-auto mt-[-350px] sm:px-4">
           <div className=" " style={{position: "relative", paddingTop: "60%", border:"1px solid #a9a9a9", borderRadius:"10px"}}>
             <iframe 
               src="https://customer-k5rghq683w5sm3cf.cloudflarestream.com/08305713d67ee6e204c0435b7ae5ce7f/iframe?muted=true&amp;preload=true&amp;loop=true&amp;autoplay=true&amp;poster=https%3A%2F%2Fcustomer-k5rghq683w5sm3cf.cloudflarestream.com%2F08305713d67ee6e204c0435b7ae5ce7f%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" 
@@ -137,23 +137,26 @@ const Contents = () => {
             ))}
           </div>
           <span>
-            
+
           </span>
         </div>
 
 
-        {/*  */}
-        <div>
-        <h2>FAQs</h2>
-        <h4>What AI model does XXX use, and is it better than ChatPDF?</h4>
-        <p>XXX combines a range of AI models, including OpenAI's ChatGPT, Google Gemini, Together AI, Mixtral, Pinecone, and LangChain. It's one of the most versatile Chat PDF tools out there, and some say it's one of the best alternatives to ChatPDF. </p>
-        <h4>Is XXX PDFGPT free to use?</h4>
-        <p>Yes, at the moment, XXX is completely free to use. You can read PDFs, summarize them, and more without paying a dime. We're doing this to get user feedback and improve the tool, so dive in and give it a try while it's free!</p>
-        <h4>What are the limitations of XXX?</h4>
-        <p>XXX currently works with PDF files only. We don't support other formats yet, but we're building more features to make working with PDFs even easier, like a PDF compressor, splitter, editor, and other tools, and they are all free! </p>
-        <h4>How do I use XXX chatbot?</h4>
-        <p>It's super easy. Just drag and drop a PDF file onto the workspace on our site, and you can start chatting with it. </p>
-    </div>
+        {/* FAQ */}
+        <div className="container max-w-screen-xl xl:mx-auto pt-[50px] sm:pt-[50px] pb-[50px] sm:pb-[50px] sm:px-4">
+            <h2 className="text-center text-[48px] capitalize leading-[72px] font-[600] pb-[30px]">Frequently Asked Questions</h2>
+        </div>
+        {/*<div>*/}
+        {/*    <h2>FAQs</h2>*/}
+        {/*    <h4>What AI model does XXX use, and is it better than ChatPDF?</h4>*/}
+        {/*    <p>XXX combines a range of AI models, including OpenAI's ChatGPT, Google Gemini, Together AI, Mixtral, Pinecone, and LangChain. It's one of the most versatile Chat PDF tools out there, and some say it's one of the best alternatives to ChatPDF. </p>*/}
+        {/*    <h4>Is XXX PDFGPT free to use?</h4>*/}
+        {/*    <p>Yes, at the moment, XXX is completely free to use. You can read PDFs, summarize them, and more without paying a dime. We're doing this to get user feedback and improve the tool, so dive in and give it a try while it's free!</p>*/}
+        {/*    <h4>What are the limitations of XXX?</h4>*/}
+        {/*    <p>XXX currently works with PDF files only. We don't support other formats yet, but we're building more features to make working with PDFs even easier, like a PDF compressor, splitter, editor, and other tools, and they are all free! </p>*/}
+        {/*    <h4>How do I use XXX chatbot?</h4>*/}
+        {/*    <p>It's super easy. Just drag and drop a PDF file onto the workspace on our site, and you can start chatting with it.</p>*/}
+        {/*</div>*/}
     </>
 
   );

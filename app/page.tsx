@@ -5,7 +5,8 @@ import Contents from '@/components/home/Contents';
 export default async function Home() {
   return (
     <main className="sm:pb-0">
-      <Header />
+        <Header />
+        <Contents />
     </main>
   );
 }
