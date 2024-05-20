@@ -217,9 +217,9 @@ const Contents = () => {
                                     </div>
 
                                     <div className="inline">
-                                        <div class="inline color-white">"</div>
-                                        <div className="inline color-white">{testimonial.content}</div>
-                                        <div className="inline color-white">"</div>
+                                        <div className="inline">"</div>
+                                        <div className="inline">{testimonial.content}</div>
+                                        <div className="inline">"</div>
                                     </div>
                                 </div>
 
