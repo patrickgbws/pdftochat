@@ -11,6 +11,9 @@ module.exports = {
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
     },
+    boxShadow: {
+      'custom': '0 6px 10px rgba(19, 17, 33, 0.02)',
+    }
   },
   plugins: [require('@tailwindcss/typography')],
 };

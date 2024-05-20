@@ -71,6 +71,53 @@ const UseCase = [
   }
 ]
 
+
+const testimonials = [
+    {
+        title: 'Auto Innovate Pro',
+        content: 'AI auto-generate capabilities have garnered positive feedback for their transformative impact on content creation. Users time-saving aspects of these tools.',
+        name: 'Bessie Cooper',
+        role: 'Product Manager',
+        img: '/pen.png',
+        tag: '#xxxx #xxx'
+    },
+    {
+        title: 'Image Generate',
+        content: 'Users consistently express satisfaction with AI auto-generate features, highlighting the rapidity with which these tools produce high-quality content.',
+        name: 'Jacob Jones',
+        role: 'Web Developer',
+        img: '/pen.png',
+    },
+    {
+        title: 'Auto-generate Animation',
+        content: 'Overall, feedback reflects a positive sentiment toward AI auto-generate with users eager to witness refinements in the future.',
+        name: 'Bessie Cooper',
+        role: 'UI/UX Designer',
+        img: '/pen.png',
+    },
+    {
+        title: 'Auto-generate Animation',
+        content: 'Overall, feedback reflects a positive sentiment toward AI auto-generate with users eager to witness refinements in the future.',
+        name: 'Bessie Cooper',
+        role: 'UI/UX Designer',
+        img: '/pen.png',
+    },
+    {
+        title: 'Auto-generate Animation',
+        content: 'Overall, feedback reflects a positive sentiment toward AI auto-generate with users eager to witness refinements in the future.',
+        name: 'Bessie Cooper',
+        role: 'UI/UX Designer',
+        img: '/pen.png',
+    },
+    {
+        title: 'Auto-generate Animation',
+        content: 'Overall, feedback reflects a positive sentiment toward AI auto-generate with users eager to witness refinements in the future.',
+        name: 'Bessie Cooper',
+        role: 'UI/UX Designer',
+        img: '/pen.png',
+    },
+];
+
 const Contents = () => {
   return (
     <>
@@ -142,9 +189,73 @@ const Contents = () => {
         {/*  </span>*/}
         {/*</div>*/}
 
-        {/* Frequently Asked Questions*/}
+        {/* Customers Love XXX! */}
         <div className="bg-[#ffffff]">
-          <div className="container max-w-screen-xl text-center mx-auto pt-[152px] pb-[70px]">
+          <div className="container max-w-screen-xl mx-auto py-[70px]">
+
+            <div className="max-w-[968px] text-center mx-auto">
+              <h2 className="text-[48px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Customers Love XXX!</h2>
+              <p className="text-[18px] capitalize text-[#6d7c90]">We understand how challenging it can be to work with PDFs, which is why we've created AI PDF chat features that users love!
+                It’s all about making it easier for you to work with documents.</p>
+            </div>
+
+
+            <div className="mt-[40px]">
+                <div role="list" className="flex justify-between flex-wrap gap-8">
+                    {testimonials.map((testimonial, index) => (
+                        <div role="listitem" className="w-[400px] bg-white rounded-[30px] border border-gray-200 rounded-2xl shadow-custom">
+                            <div className="flex p-[32px] full-height">
+                                <div className="flex flex-col block gap-y-8">
+                                    <div className="flex gap-4 justify-start items-center">
+                                        <div className="size-40x40 overflow-hidden radius-360 no-shrink border-2px-indigo-600">
+                                            <Image src={testimonial.img} alt={testimonial.name} width={40} height={40} className="" />
+                                        </div>
+                                        <div className="flex-column gap-4">
+                                            <div className="text-[16px] font-[600]">{testimonial.name}</div>
+                                            <div className="text-[14px]">{testimonial.role}</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="inline">
+                                        <div class="inline color-white">"</div>
+                                        <div className="inline color-white">{testimonial.content}</div>
+                                        <div className="inline color-white">"</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+
+            {/*<div className="flex justify-center items-center mt-[40px]">*/}
+            {/*    <div className="flex flex-row gap-32 mobile-vertical w-dyn-items">*/}
+            {/*      {testimonials.map((testimonial, index) => (*/}
+            {/*          <div key={index} className="bg-[#f9f9f9] p-[20px] rounded-[8px]">*/}
+            {/*            <div className="flex-column gap-32 padding-32 bg-gray-50 radius-16 full-height">*/}
+
+            {/*              <div className="flex-row justify-space-between full-width flex-align-center">*/}
+            {/*                <Image src={testimonial.img} alt={testimonial.name} width={50} height={50} className="" />*/}
+            {/*                <p className="font-bold">{testimonial.name}</p>*/}
+            {/*                <p>{testimonial.role}</p>*/}
+            {/*              </div>*/}
+            {/*            </div>*/}
+            {/*            <h3>{testimonial.title}</h3>*/}
+            {/*            <p>{testimonial.content}</p>*/}
+            {/*          </div>*/}
+            {/*      ))}*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
+          </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className="bg-[#ffffff]">
+          <div className="container max-w-screen-xl text-center mx-auto pt-[70px] pb-[70px]">
 
             <div className="max-w-[968px] mx-auto">
               <h2 className="text-[48px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Frequently Asked Questions</h2>
@@ -178,18 +289,6 @@ const Contents = () => {
           </div>
         </div>
 
-
-        {/*<div>*/}
-        {/*    <h2>FAQs</h2>*/}
-        {/*    <h4>What AI model does XXX use, and is it better than ChatPDF?</h4>*/}
-        {/*    <p>XXX combines a range of AI models, including OpenAI's ChatGPT, Google Gemini, Together AI, Mixtral, Pinecone, and LangChain. It's one of the most versatile Chat PDF tools out there, and some say it's one of the best alternatives to ChatPDF. </p>*/}
-        {/*    <h4>Is XXX PDFGPT free to use?</h4>*/}
-        {/*    <p>Yes, at the moment, XXX is completely free to use. You can read PDFs, summarize them, and more without paying a dime. We're doing this to get user feedback and improve the tool, so dive in and give it a try while it's free!</p>*/}
-        {/*    <h4>What are the limitations of XXX?</h4>*/}
-        {/*    <p>XXX currently works with PDF files only. We don't support other formats yet, but we're building more features to make working with PDFs even easier, like a PDF compressor, splitter, editor, and other tools, and they are all free! </p>*/}
-        {/*    <h4>How do I use XXX chatbot?</h4>*/}
-        {/*    <p>It's super easy. Just drag and drop a PDF file onto the workspace on our site, and you can start chatting with it.</p>*/}
-        {/*</div>*/}
     </>
 
   );

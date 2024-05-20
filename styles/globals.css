@@ -138,8 +138,7 @@ a {
   border-radius: 20px;
   width: 100%;
   height: auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 30px 35px;
   box-shadow: 0 6px 10px rgba(19, 17, 33, .02);
 }
 
@@ -149,8 +148,6 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 26px;
-  padding-bottom: 26px;
   display: flex;
   overflow: hidden;
 }
@@ -178,7 +175,7 @@ a {
 }
 
 .faq-icon-bar {
-  background-color: #5e50a0;
+  background-color: #1e58eb;
   border-radius: 100px;
   width: 12px;
   height: 2px;
@@ -190,11 +187,12 @@ a {
 }
 
 .faq-answer {
-  width: 1054.22px;
+  width: 1160px;
   overflow: hidden;
   transition: height 0.3s ease;
 }
 
 .faq-answer-text {
-  margin-bottom: 32px;
+  color: #212121;
+  margin-top: 12px;
 }
