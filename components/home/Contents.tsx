@@ -122,25 +122,25 @@ const Contents = () => {
         </div>
 
         {/* AI-Powered PDF Interaction for Any Use Case */}
-        <div className="container max-w-screen-xl xl:mx-auto pt-[50px] sm:pt-[50px] pb-[50px] sm:pb-[50px] sm:px-4">
-          <h2 className="text-center text-[48px] sm:text-[48px] capitalize font-light leading-[72px] sm:leading-[34.5px] font-[500] pb-3 sm:pb-[30px] ">
-            AI-Powered PDF Interaction for Any Use Case
-          </h2>
-          <p className="text-center text-[18px] sm:text-[18px] font-light leading-[25px] sm:leading-[25px] max-w-[968px] mx-auto pb-[18px] sm:pb-11">
-            At XXX, we're a team of AI experts who get what it's like to deal with dense, multi-page PDFs. Making it easier for you to find, 
-            summarize, and understand all that information is why XXX was created - it works no matter what kind of PDF content you want to explore. 
-          </p>
-          <div className="flex">
-            {UseCase.map((item, index) => (
-              <div className="">
-                  <p className="flex "><Image src={item.image} alt={item.alt} width={20} height={20} className="w-6 sm:w-[20x] h-6 sm:h-[20px]"/>{item.text}</p>
-              </div>
-            ))}
-          </div>
-          <span>
+        {/*<div className="container max-w-screen-xl xl:mx-auto pt-[50px] sm:pt-[50px] pb-[50px] sm:pb-[50px] sm:px-4">*/}
+        {/*  <h2 className="text-center text-[48px] sm:text-[48px] capitalize font-light leading-[72px] sm:leading-[34.5px] font-[500] pb-3 sm:pb-[30px] ">*/}
+        {/*    AI-Powered PDF Interaction for Any Use Case*/}
+        {/*  </h2>*/}
+        {/*  <p className="text-center text-[18px] sm:text-[18px] font-light leading-[25px] sm:leading-[25px] max-w-[968px] mx-auto pb-[18px] sm:pb-11">*/}
+        {/*    At XXX, we're a team of AI experts who get what it's like to deal with dense, multi-page PDFs. Making it easier for you to find, */}
+        {/*    summarize, and understand all that information is why XXX was created - it works no matter what kind of PDF content you want to explore. */}
+        {/*  </p>*/}
+        {/*  <div className="flex">*/}
+        {/*    {UseCase.map((item, index) => (*/}
+        {/*      <div className="">*/}
+        {/*          <p className="flex "><Image src={item.image} alt={item.alt} width={20} height={20} className="w-6 sm:w-[20x] h-6 sm:h-[20px]"/>{item.text}</p>*/}
+        {/*      </div>*/}
+        {/*    ))}*/}
+        {/*  </div>*/}
+        {/*  <span>*/}
 
-          </span>
-        </div>
+        {/*  </span>*/}
+        {/*</div>*/}
 
         {/* Frequently Asked Questions*/}
         <div className="bg-[#ffffff]">
