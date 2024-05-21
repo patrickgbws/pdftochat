@@ -116,6 +116,55 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* CustomersReview */
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin: 0 0.5rem;
+}
+
+.carousel-controls {
+  transition: opacity 0.3s ease;
+}
+
+button {
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.w-4.h-4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.relative:hover .carousel-controls {
+  display: flex;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
 
 
 /*FAQ*/

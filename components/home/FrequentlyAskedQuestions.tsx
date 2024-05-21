@@ -1,6 +1,7 @@
 "use client"; // 添加这行
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 // 定义 FAQ 数据
 const FAQItemmessage = [
@@ -79,4 +80,26 @@ const FAQList: React.FC = () => {
     );
 };
 
-export default FAQList;
+// Frequently Asked Questions 组件
+const FrequentlyAskedQuestions = () => {
+    return (
+        <>
+            {/* Frequently Asked Questions */}
+            <div className="bg-[#ffffff]">
+                <div className="container max-w-screen-xl text-center mx-auto pt-[70px] pb-[70px]">
+
+                    <div className="max-w-[968px] mx-auto">
+                        <h2 className="text-[48px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div className="mt-[40px]">
+                        <FAQList />
+                    </div>
+
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default FrequentlyAskedQuestions;

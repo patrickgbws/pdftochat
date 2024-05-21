@@ -1,106 +1,89 @@
+import React from 'react';
 import Logo from '../ui/Logo';
 import Link from 'next/link';
 
-const VectorStoreFooter = () => {
-  const vectorStoreEnv = process.env.NEXT_PUBLIC_VECTORSTORE ?? 'pinecone';
-
-  if (vectorStoreEnv === 'pinecone') {
-    return (
-      <>
-        ,{' '}
-        <a
-          href="https://www.pinecone.io/"
-          target="_blank"
-          className="font-semibold transition hover:text-black/50"
-        >
-          Pinecone
-        </a>
-        , and{' '}
-      </>
-    );
-  } else if (vectorStoreEnv === 'mongodb') {
-    return (
-      <>
-        ,{' '}
-        <a
-          href="https://www.mongodb.com/"
-          target="_blank"
-          className="font-semibold transition hover:text-black/50"
-        >
-          MongoDB
-        </a>
-        , and{' '}
-      </>
-    );
-  } else {
-    console.error(`Invalid vector store id provided: ${vectorStoreEnv}`);
-    return <>, and </>;
-  }
-};
-
 const Footer = () => {
-  return (
-    <div className="border-t-[rgba(0,0,0,0.20)] border-t border-solid pt-4">
-      <div className="container flex flex-col sm:flex-row justify-between items-center sm:h-[77px] pt-3 pb-6 sm:pt-0 px-2 sm:px-0 sm:space-y-0 space-y-4 mx-auto">
-        <Logo />
-        <span className="sm:text-xl text-lg sm:text-left text-center">
-          Powered by{' '}
-          <a
-            href="https://dub.sh/together-ai"
-            target="_blank"
-            className="font-semibold transition hover:text-black/50"
-          >
-            Together AI
-          </a>
-          ,{' '}
-          <a
-            href="https://mistral.ai/"
-            target="_blank"
-            className=" font-semibold transition hover:text-black/50"
-          >
-            Mixtral
-          </a>
-          <VectorStoreFooter />
-          <a
-            href="https://www.langchain.com/"
-            target="_blank"
-            className="font-semibold transition hover:text-black/50"
-          >
-            Langchain
-          </a>
-          .
-        </span>
-        <div className="flex items-center gap-[22px] sm:gap-[39px]">
-          <div className="flex space-x-4 pb-4 sm:pb-0">
-            <Link
-              href="https://twitter.com/nutlope"
-              className="group"
-              aria-label="Twitter"
-            >
-              <svg
-                aria-hidden="true"
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
-              >
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 22 5.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743 11.65 11.65 0 0 1-8.457-4.287 4.106 4.106 0 0 0 1.27 5.477A4.073 4.073 0 0 1 2.8 9.713v.052a4.105 4.105 0 0 0 3.292 4.022 4.093 4.093 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 2 18.407a11.615 11.615 0 0 0 6.29 1.84" />
-              </svg>
-            </Link>
-            <Link
-              href="https://github.com/nutlope/pdftochat"
-              className="group"
-              aria-label="GitHub"
-            >
-              <svg
-                aria-hidden="true"
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
-              >
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <>
+            <div className='bg-[#111827]'>
+                <div className="container max-w-screen-xl mx-auto hidden w-full text-white sm:flex justify-between items-center px-4 py-[50px]">
+                    <div className="max-width[338] flex flex-col justify-between gap-24">
+                        <div>
+                            <Link href={'/'} className="flex items-center mb-[30px]">
+                                <span className="shadows text-primary text-[28px] sm:text-[28px]">
+                                    PDF AI Chatbot
+                                </span>
+                            </Link>
+                            <div data-color="1" className="text-[16px] text-[#ffffff]">Durable makes owning a business easier than having a job</div>
+                        </div>
+                        <div className="flex flex-col gap-y-[24px]">
+                            <div data-color="2" className="font-size-16 color-gray-500">All rights reserved. © PDFAIChatbot {currentYear} </div>
+                            <div data-color="1" className="flex-row gap-28">
+                                <a aria-label="Facebook" href="https://www.facebook.com/DurableAI" target="_blank" className="w-inline-block">
+                                    <div data-color="1" className="flex-row color-indigo-500 w-embed">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clipPath="url(#clip0_3117_1797)">
+                                                <path d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z" fill="currentColor"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_3117_1797">
+                                                    <rect width="20" height="20" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="W-full">
+                        <div className="flex flex-row">
+                            <div></div>
+                            <div>
+                                <div>Product</div>
+                                <div>
+                                    <a href="/ai-assistant">AI Assistant</a>
+                                    <a href="/ai-crm-small-business">CRM</a>
+                                    <a href="/invoice-builder">Invoicing</a>
+                                    <a href="/pricing">Pricing</a>
+                                    <a href="/ai-website-builder" aria-current="page">Website builder</a>
+                                    <a href="/ai-blog-generator">Blog builder</a>
+                                    <a href="/ai-brand-builder">Brand builder</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>Resources</div>
+                                <div>
+                                    <a href="/blog">Blog</a>
+                                    <a href="/perks">Perks</a>
+                                    <a href="/state-guides">State guides</a>
+                                    <a href="/website-builder-for-service-businesses">Industries</a>
+                                    <a href="/guides">Starter guides</a>
+                                    <a href="/website-templates">Website templates</a>
+                                    <a href="/ai-tools">AI tools</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>Company</div>
+                                <div>
+                                    <a href="/about">About</a>
+                                    <a href="/durable-affiliate-program">Affiliate program</a>
+                                    <a href="/careers">Careers</a>
+                                    <a href="/newsletter">Newsletter</a>
+                                    <a href="/privacy-policy">Privacy&nbsp;policy</a>
+                                    <a href="https://help.durable.co">Support</a>
+                                    <a href="/terms-of-service">Terms of service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Footer;
