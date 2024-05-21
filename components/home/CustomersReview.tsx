@@ -107,47 +107,45 @@ const CustomersReview = () => {
                 <div className="container max-w-screen-xl mx-auto pt-[70px]">
                     <div className="max-w-[968px] text-center mx-auto">
                         <h2 className="text-[48px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Customers Love XXX!</h2>
-                        <p className="text-[16px] capitalize text-[#6d7c90]">We understand how challenging it can be to work with PDFs, which is why we've created AI PDF chat features that users love! It’s all about making it easier for you to work with documents.</p>
+                        <p className="text-[18px] capitalize text-[#6d7c90]">We understand how challenging it can be to work with PDFs, which is why we've created AI PDF chat features that users love! It’s all about making it easier for you to work with documents.</p>
                     </div>
 
-                    <div className="relative mt-[50px] px-[60px] ">
+                    <div className="relative mt-[40px] px-[60px]" onMouseEnter={() => document.querySelector('.carousel-controls').classList.remove('hidden')} onMouseLeave={() => document.querySelector('.carousel-controls').classList.add('hidden')}>
                         <div ref={carouselRef} className="carousel flex overflow-x-hidden scroll-smooth">
                             {testimonials.map((testimonial, index) => (
-                                <div key={index} className="carousel-item flex-shrink-0 w-[372px] bg-white rounded-[30px] border border-gray-200 shadow-custom m-2">
-                                    <div className="flex p-[32px] full-height">
-                                        <div className="flex flex-col gap-y-8">
-                                            <div className="flex gap-4 justify-start items-start">
-                                                <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">
-                                                    <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>
-                                                    <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>
-                                                </div>
+                                <div key={index} className="carousel-item flex-shrink-0 w-[370px] bg-white rounded-[30px] border border-gray-200 shadow-custom m-2">
+                                    <div className="flex flex-col p-[32px] full-height">
+                                        <div className="flex gap-4 justify-start items-center">
+                                            <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">
+                                                <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />
                                             </div>
+                                            <div className="flex flex-col gap-4">
+                                                <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>
+                                                <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>
+                                            </div>
+                                        </div>
 
-                                            <div className="inline">
-                                                <div className="inline">"</div>
-                                                <div className="inline">{testimonial.content}</div>
-                                                <div className="inline">"</div>
-                                            </div>
+                                        <div className="inline">
+                                            <div className="inline">"</div>
+                                            <div className="inline">{testimonial.content}</div>
+                                            <div className="inline">"</div>
+                                        </div>
 
-                                            <div className="inline">
-                                                {Array.isArray(testimonial.tags) && testimonial.tags.map((tags, tagIndex) => (
-                                                    <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">
-                                                        {tags}
-                                                        {tagIndex !== testimonial.tags.length - 1 && ' '}
-                                                    </span>
-                                                ))}
-                                            </div>
+                                        <div className="mt-auto"> {/* 确保这部分内容始终在底部 */}
+                                            {Array.isArray(testimonial.tags) && testimonial.tags.map((tags, tagIndex) => (
+                                                <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">
+                                                    {tags}
+                                                    {tagIndex !== testimonial.tags.length - 1 && ' '}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="carousel-controls absolute top-0 left-0 right-0 bottom-0 flex justify-between items-center">
-                            <button onClick={handlePrev} className="bg-[#e9e9e978] p-3 border border-solid border-[#e9e9e9] mx-4 relative left-[-20px]"> &lt; </button>
-                            <button onClick={handleNext} className="bg-[#e9e9e978] p-3 border border-solid border-[#e9e9e9] mx-4 relative right-[-20px]"> &gt; </button>
+                        <div className="carousel-controls hidden absolute top-0 left-0 right-0 bottom-0 flex justify-between items-center">
+                            <button onClick={handlePrev} className="bg-gray-200 p-2 rounded-full mx-4"> &lt; </button>
+                            <button onClick={handleNext} className="bg-gray-200 p-2 rounded-full mx-4"> &gt; </button>
                         </div>
                     </div>
                 </div>
